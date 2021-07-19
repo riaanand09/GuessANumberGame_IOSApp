@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RUMAD_GuessANumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have 5 attempts to guess correctly before you lose." textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mK6-6N-QzB">
+                                <rect key="frame" x="20" y="164" width="374" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                <color key="textColor" red="0.25728056989999998" green="0.2872689766" blue="0.32415123260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generate a number between 1 and 100! " textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89i-XW-hXE">
+                                <rect key="frame" x="75.5" y="149" width="284.5" height="18"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                <color key="textColor" red="0.25728056988159642" green="0.28726897657679967" blue="0.32415123256385747" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EX: 34" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJJ-dZ-CqQ">
+                                <rect key="frame" x="171.5" y="351" width="71" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="6Oj-ln-XAY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your guess:" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQx-KA-HLC">
+                                <rect key="frame" x="170.5" y="323" width="73" height="18"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="15"/>
+                                <color key="textColor" red="0.25728056989999998" green="0.2872689766" blue="0.32415123260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Y1-WY-sTm">
+                                <rect key="frame" x="185.5" y="402" width="43" height="35"/>
+                                <color key="backgroundColor" red="0.25728056988159642" green="0.28726897657679967" blue="0.32415123256385747" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="7YA-s9-Rxp"/>
+                                </constraints>
+                                <state key="normal" title="Guess">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapGuessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KK0-CZ-8uH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TD9-8V-6i5">
+                                <rect key="frame" x="173.5" y="218" width="67" height="50"/>
+                                <color key="backgroundColor" red="0.25728056989999998" green="0.2872689766" blue="0.32415123260000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cGd-Fb-vha"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="titleShadowOffset" width="6" height="1"/>
+                                <state key="normal" title="Generate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium" weight="bold"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapGenerateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0MA-kw-itE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.87343041170470903" green="0.92879891022374006" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.76691920589999996" green="0.87619562039999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mJJ-dZ-CqQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="351" id="05E-eB-bls"/>
+                            <constraint firstItem="mJJ-dZ-CqQ" firstAttribute="top" secondItem="KQx-KA-HLC" secondAttribute="bottom" constant="10" id="Fua-Bz-pF8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="89i-XW-hXE" secondAttribute="trailing" constant="54" id="Jx5-Qk-tHk"/>
+                            <constraint firstItem="6Y1-WY-sTm" firstAttribute="top" secondItem="mJJ-dZ-CqQ" secondAttribute="bottom" constant="17" id="L6i-fI-9sf"/>
+                            <constraint firstItem="TD9-8V-6i5" firstAttribute="top" secondItem="mK6-6N-QzB" secondAttribute="bottom" constant="25" id="TCn-6F-P29"/>
+                            <constraint firstItem="mJJ-dZ-CqQ" firstAttribute="centerX" secondItem="KQx-KA-HLC" secondAttribute="centerX" id="WI5-Ue-Jic"/>
+                            <constraint firstItem="89i-XW-hXE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75.5" id="XWc-7K-gYX"/>
+                            <constraint firstItem="mJJ-dZ-CqQ" firstAttribute="centerX" secondItem="TD9-8V-6i5" secondAttribute="centerX" id="Y0r-Sd-Gp8"/>
+                            <constraint firstItem="mJJ-dZ-CqQ" firstAttribute="centerX" secondItem="mK6-6N-QzB" secondAttribute="centerX" id="sJc-j3-MCO"/>
+                            <constraint firstItem="89i-XW-hXE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="105" id="u92-ic-VA3"/>
+                            <constraint firstItem="mJJ-dZ-CqQ" firstAttribute="centerX" secondItem="6Y1-WY-sTm" secondAttribute="centerX" id="xAY-H6-u4X"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="numberGuessTextField" destination="mJJ-dZ-CqQ" id="h7c-Qh-I3L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4.3478260869565224" y="79.6875"/>
+        </scene>
+    </scenes>
+</document>

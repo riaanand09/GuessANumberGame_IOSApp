@@ -1,0 +1,6 @@
+framework module Pods_RUMAD_GuessANumber {
+  umbrella header "Pods-RUMAD_GuessANumber-umbrella.h"
+
+  export *
+  module * { export * }
+}
